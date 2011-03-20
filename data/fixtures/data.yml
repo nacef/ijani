@@ -1,0 +1,165 @@
+State:
+  State_1:
+    name: Tunis
+  State_2:
+    name: Ariana
+  State_3:
+    name: Manouba
+  State_4:
+    name: 'Ben Arous'
+  State_5:
+    name: Bizerte
+  State_6:
+    name: Nabeul
+  State_7:
+    name: Sousse
+  State_8:
+    name: Monastir
+  State_9:
+    name: Mahdia
+  State_10:
+    name: Sfax
+Presta:
+  Presta_1:
+    name: 'Mohamed TOUNSI'
+    presentation: ''
+    address: '6 Rue Ammar Ben Yasser - 2081'
+    latitude: ''
+    longitude: ''
+    tel: '71984657'
+    mobile: '20669988'
+    fax: ''
+    Locality: Locality_4
+  Presta_2:
+    name: 'John DOE'
+    presentation: ''
+    address: 'Cité el ghazela'
+    latitude: ''
+    longitude: ''
+    tel: '70645214'
+    mobile: '55447788'
+    fax: ''
+    Locality: Locality_6
+  Presta_3:
+    name: 'John SMITH'
+    presentation: ''
+    address: 'Avenue Hedi Nouira - Ennasr 1'
+    latitude: ''
+    longitude: ''
+    tel: '79684123'
+    mobile: '98654987'
+    fax: ''
+    Locality: Locality_7
+PrestaDomain:
+  PrestaDomain_1_1:
+    Presta: Presta_1
+    domain_id: '1'
+  PrestaDomain_1_2:
+    Presta: Presta_1
+    domain_id: '2'
+  PrestaDomain_2_3:
+    Presta: Presta_2
+    domain_id: '3'
+  PrestaDomain_2_4:
+    Presta: Presta_2
+    domain_id: '4'
+  PrestaDomain_3_5:
+    Presta: Presta_3
+    domain_id: '5'
+  PrestaDomain_3_6:
+    Presta: Presta_3
+    domain_id: '6'
+  PrestaDomain_3_7:
+    Presta: Presta_3
+    domain_id: '7'
+Domain:
+  Domain_1:
+    name: Plomberie
+  Domain_2:
+    name: Jardinage
+  Domain_3:
+    name: Peinture
+  Domain_4:
+    name: Décoration
+  Domain_5:
+    name: Chauffage
+  Domain_6:
+    name: Climatisation
+  Domain_7:
+    name: 'TV / Satellite'
+Town:
+  Town_1:
+    name: Tunis
+    State: State_1
+  Town_2:
+    name: Ariana
+    State: State_2
+  Town_3:
+    name: 'Ben Arous'
+    State: State_4
+  Town_4:
+    name: 'El mourouj'
+    State: State_4
+Locality:
+  Locality_1:
+    name: Marsa
+    Town: Town_1
+  Locality_2:
+    name: 'Manar 1'
+    Town: Town_2
+  Locality_3:
+    name: 'Centre ville'
+    Town: Town_1
+  Locality_4:
+    name: 'Petite Ariana'
+    Town: Town_2
+  Locality_5:
+    name: 'Ennasr 1'
+    Town: Town_2
+  Locality_6:
+    name: 'Ennasr 2'
+    Town: Town_2
+  Locality_7:
+    name: 'Manar 2'
+    Town: Town_2
+  Locality_8:
+    name: 'Menzah 1'
+    Town: Town_2
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2011-03-18 21:23:11'
+    updated_at: '2011-03-18 21:23:11'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    Group: sfGuardGroup_1
+    Permission: sfGuardPermission_1
+    created_at: '2011-03-18 21:23:11'
+    updated_at: '2011-03-18 21:23:11'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    User: sfGuardUser_1
+    Group: sfGuardGroup_1
+    created_at: '2011-03-18 21:23:11'
+    updated_at: '2011-03-18 21:23:11'
+sfGuardUser:
+  sfGuardUser_1:
+    first_name: John
+    last_name: Doe
+    email_address: john.doe@gmail.com
+    username: admin
+    algorithm: sha1
+    salt: 5ebb02a5110a6a8576cef4f19aa2c79c
+    password: 8056fe20bb68fe2c2b61aeb6c14dea02d5fa1290
+    is_active: true
+    is_super_admin: true
+    last_login: '2011-03-19 18:43:14'
+    created_at: '2011-03-18 21:23:11'
+    updated_at: '2011-03-19 18:43:14'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2011-03-18 21:23:11'
+    updated_at: '2011-03-18 21:23:11'

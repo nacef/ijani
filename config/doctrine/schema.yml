@@ -1,0 +1,75 @@
+Presta:
+  columns:
+    name: string(50)
+    presentation: string(255)
+    address: string(255)
+    latitude: string(20)
+    longitude: string(20)
+    tel: string(20)
+    mobile: string(20)
+    fax: string(20)
+    locality_id: integer
+  relations:
+    Locality:
+      local: locality_id
+      foreign: id
+    Domaines:
+      class: Domain
+      local: presta_id
+      foreign: domain_id
+      refClass: PrestaDomain
+
+Domain:
+  columns:
+    name: string(50)
+  relations:
+    Prestas:
+      class: Presta
+      local: domain_id
+      foreign: presta_id
+      refClass: PrestaDomain
+
+PrestaDomain:
+  columns:
+    presta_id:
+      type: integer
+      primary: true
+    domain_id:
+      type: integer
+      primary: true
+
+User:
+  columns:
+    first_name: string(50)
+    last_name: string(50)
+    address: text
+    latitude: string(20)
+    longitude: string(20)
+
+State:
+  columns:
+    name: string(50)
+  relations:
+    Towns:
+      type: many
+      class: Town
+      local: id
+      foreign: state_id
+
+Town:
+  columns:
+    name: string(50)
+    state_id: integer
+  relations:
+    State:
+      local: state_id
+      foreign: id
+
+Locality:
+  columns:
+    name: string(50)
+    town_id: integer
+  relations:
+    Town:
+      local: town_id
+      foreign: id
