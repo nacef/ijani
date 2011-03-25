@@ -7,8 +7,22 @@
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_stylesheets() ?>
     <?php include_javascripts() ?>
+    <!--[if IE]>
+      <link rel="stylesheet" href="/css/blueprint/ie.css" type="text/css" media="screen, projection">
+    <![endif]-->
   </head>
   <body>
-    <?php echo $sf_content ?>
+    <div id="container">
+      <div id="header" class="span-24 last">
+        <h1 id="ijani">IJENI</h1>
+      </div>
+      <hr/>
+      <div class="span-6" id="sidebar">
+        <?php include_component('common', 'filter') ?>
+      </div>
+      <div class="span-17 last" id="content">
+        <?php echo $sf_content ?>
+      </div>
+    </div>
   </body>
 </html>

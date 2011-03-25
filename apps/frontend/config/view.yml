@@ -13,13 +13,12 @@ default:
     #robots:       index, follow
 
   stylesheets:
-    - main.css
-    - styles.css
-    - master.css
-    - advanced.css
+    - blueprint/screen.css
+    - blueprint/plugins/fancy-type/screen.css
 
   javascripts:
     - jquery-1.5.1.js
+    - effects.js
 
   has_layout:     true
   layout:         layout
