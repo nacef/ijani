@@ -98,5 +98,10 @@ abstract class BasePresta extends sfDoctrineRecord
              'refClass' => 'PrestaDomain',
              'local' => 'presta_id',
              'foreign' => 'domain_id'));
+
+        $taggable0 = new Taggable();
+        $commentable0 = new Doctrine_Template_Commentable();
+        $this->actAs($taggable0);
+        $this->actAs($commentable0);
     }
 }

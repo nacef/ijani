@@ -12,7 +12,11 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [main.css]
+  stylesheets:
+    - main.css
+    - styles.css
+    - master.css
+    - advanced.css
 
   javascripts:
     - jquery-1.5.1.js

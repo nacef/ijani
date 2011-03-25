@@ -1,4 +1,7 @@
 Presta:
+  actAs:
+    Taggable: ~
+    Commentable: ~
   columns:
     name: string(50)
     presentation: string(255)

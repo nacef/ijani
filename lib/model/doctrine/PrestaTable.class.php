@@ -25,4 +25,49 @@ class PrestaTable extends Doctrine_Table
               ->orderBy("p.name")
               ->execute();
     }
+
+    public function getByDomainAndTown($domain_id, $town_id) {
+      return $this->createQuery("p")
+              ->innerJoin("p.PrestaDomain pd")
+              ->innerJoin("p.Locality l")
+              ->where("pd.domain_id = ?", $domain_id)
+              ->andWhere("l.town_id = ?", $town_id)
+              ->orderBy("p.name")
+              ->execute();
+    }
+
+    public function getByDomainAndState($domain_id, $state_id) {
+      return $this->createQuery("p")
+              ->innerJoin("p.PrestaDomain pd")
+              ->innerJoin("p.Locality l")
+              ->innerJoin("l.Town t")
+              ->where("pd.domain_id = ?", $domain_id)
+              ->andWhere("t.state_id = ?", $state_id)
+              ->orderBy("p.name")
+              ->execute();
+    }
+
+    public function getByLocality($locality_id) {
+      return $this->createQuery("p")
+              ->where("p.locality_id = ?", $locality_id)
+              ->orderBy("p.name")
+              ->execute();
+    }
+
+    public function getByTown($town_id) {
+      return $this->createQuery("p")
+              ->innerJoin("p.Locality l")
+              ->where("l.town_id = ?", $town_id)
+              ->orderBy("p.name")
+              ->execute();
+    }
+
+    public function getByState($state_id) {
+      return $this->createQuery("p")
+              ->innerJoin("p.Locality l")
+              ->innerJoin("l.Town t")
+              ->where("t.state_id = ?", $state_id)
+              ->orderBy("p.name")
+              ->execute();
+    }
 }
