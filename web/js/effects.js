@@ -10,7 +10,7 @@ $(document).ready(function(){
 
   $("#filter_button").click(function(){
     $.post("presta/search", $('#filter_form').serialize(), function(data){
-      $('#results').html(data);
+      $('#content').html(data);
     });
   });
 });
