@@ -17,7 +17,7 @@
         <h1 id="ijani">IJENI</h1>
       </div>
       <hr/>
-      <div class="span-6" id="sidebar">
+      <div class="span-6 colborder" id="sidebar">
         <?php include_component('common', 'filter') ?>
       </div>
       <div class="span-17 last" id="content">
