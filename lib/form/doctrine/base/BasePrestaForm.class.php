@@ -25,6 +25,8 @@ abstract class BasePrestaForm extends BaseFormDoctrine
       'mobile'        => new sfWidgetFormInputText(),
       'fax'           => new sfWidgetFormInputText(),
       'locality_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Locality'), 'add_empty' => true)),
+      'rating'        => new sfWidgetFormInputText(),
+      'reperes'       => new sfWidgetFormInputText(),
       'domaines_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Domain')),
     ));
 
@@ -39,6 +41,8 @@ abstract class BasePrestaForm extends BaseFormDoctrine
       'mobile'        => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'fax'           => new sfValidatorString(array('max_length' => 20, 'required' => false)),
       'locality_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Locality'), 'required' => false)),
+      'rating'        => new sfValidatorNumber(array('required' => false)),
+      'reperes'       => new sfValidatorString(array('max_length' => 100, 'required' => false)),
       'domaines_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Domain', 'required' => false)),
     ));
 

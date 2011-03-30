@@ -15,9 +15,12 @@ default:
   stylesheets:
     - blueprint/screen.css
     - blueprint/plugins/fancy-type/screen.css
+    - /js/jquery.ui.stars/jquery.ui.stars.css
 
   javascripts:
     - jquery-1.5.1.js
+    - jquery-ui-1.8.11.custom.min.js
+    - /js/jquery.ui.stars/jquery.ui.stars.min.js
     - effects.js
 
   has_layout:     true

@@ -22,6 +22,8 @@ abstract class BasePrestaFormFilter extends BaseFormFilterDoctrine
       'mobile'        => new sfWidgetFormFilterInput(),
       'fax'           => new sfWidgetFormFilterInput(),
       'locality_id'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Locality'), 'add_empty' => true)),
+      'rating'        => new sfWidgetFormFilterInput(),
+      'reperes'       => new sfWidgetFormFilterInput(),
       'domaines_list' => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'Domain')),
     ));
 
@@ -35,6 +37,8 @@ abstract class BasePrestaFormFilter extends BaseFormFilterDoctrine
       'mobile'        => new sfValidatorPass(array('required' => false)),
       'fax'           => new sfValidatorPass(array('required' => false)),
       'locality_id'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Locality'), 'column' => 'id')),
+      'rating'        => new sfValidatorSchemaFilter('text', new sfValidatorNumber(array('required' => false))),
+      'reperes'       => new sfValidatorPass(array('required' => false)),
       'domaines_list' => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'Domain', 'required' => false)),
     ));
 
@@ -83,6 +87,8 @@ abstract class BasePrestaFormFilter extends BaseFormFilterDoctrine
       'mobile'        => 'Text',
       'fax'           => 'Text',
       'locality_id'   => 'ForeignKey',
+      'rating'        => 'Number',
+      'reperes'       => 'Text',
       'domaines_list' => 'ManyKey',
     );
   }

@@ -36,6 +36,8 @@ class SearchForm extends sfForm {
       'add_empty' => true,
       'order_by' => array('name', 'asc')
     ));
+
+    $this->widgetSchema['domain']->setLabel("Je cherche un : ");
   }
 }
 ?>

@@ -14,6 +14,8 @@
  * @property string $mobile
  * @property string $fax
  * @property integer $locality_id
+ * @property float $rating
+ * @property string $reperes
  * @property Locality $Locality
  * @property Doctrine_Collection $Domaines
  * 
@@ -26,6 +28,8 @@
  * @method string              getMobile()       Returns the current record's "mobile" value
  * @method string              getFax()          Returns the current record's "fax" value
  * @method integer             getLocalityId()   Returns the current record's "locality_id" value
+ * @method float               getRating()       Returns the current record's "rating" value
+ * @method string              getReperes()      Returns the current record's "reperes" value
  * @method Locality            getLocality()     Returns the current record's "Locality" value
  * @method Doctrine_Collection getDomaines()     Returns the current record's "Domaines" collection
  * @method Presta              setName()         Sets the current record's "name" value
@@ -37,6 +41,8 @@
  * @method Presta              setMobile()       Sets the current record's "mobile" value
  * @method Presta              setFax()          Sets the current record's "fax" value
  * @method Presta              setLocalityId()   Sets the current record's "locality_id" value
+ * @method Presta              setRating()       Sets the current record's "rating" value
+ * @method Presta              setReperes()      Sets the current record's "reperes" value
  * @method Presta              setLocality()     Sets the current record's "Locality" value
  * @method Presta              setDomaines()     Sets the current record's "Domaines" collection
  * 
@@ -84,6 +90,13 @@ abstract class BasePresta extends sfDoctrineRecord
              ));
         $this->hasColumn('locality_id', 'integer', null, array(
              'type' => 'integer',
+             ));
+        $this->hasColumn('rating', 'float', null, array(
+             'type' => 'float',
+             ));
+        $this->hasColumn('reperes', 'string', 100, array(
+             'type' => 'string',
+             'length' => 100,
              ));
     }
 

@@ -12,6 +12,8 @@ Presta:
     mobile: string(20)
     fax: string(20)
     locality_id: integer
+    rating: float
+    reperes: string(100)
   relations:
     Locality:
       local: locality_id

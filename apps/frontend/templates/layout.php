@@ -14,7 +14,7 @@
   <body>
     <div id="container">
       <div id="header" class="span-24 last">
-        <h1 id="ijani">IJENI</h1>
+        <h1 id="ijani"><a href="<?php echo url_for('@homepage'); ?>">IJENI</a></h1>
       </div>
       <hr/>
       <div class="span-6 colborder" id="sidebar">

@@ -1,1 +1,0 @@
-<?php include_component('common', 'filter'); ?>

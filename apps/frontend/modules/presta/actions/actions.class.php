@@ -40,6 +40,9 @@ class prestaActions extends sfActions
   public function executeDetails(sfWebRequest $request) {
     $this->forward404Unless($presta_id = $request->getParameter('id'));
     $this->presta = PrestaTable::getInstance()->find($presta_id);
+    $this->gmap = new GMap();
+    $this->gmap->addMarker(new GMapMarker($this->presta->getLatitude(), $this->presta->getLongitude()));
+    $this->gmap->centerAndZoomOnMarkers();
   }
 
   public function executeRating(sfWebRequest $request) {

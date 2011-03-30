@@ -1,6 +1,13 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
+domaine:
+  url: /:id/:domaine.html
+  param: { module: presta, action: domain }
+  requirements:
+    id: \d+
+    domaine: [a-zA-Z0-9]+
+
 dynamic_javascript:
   url: /djs/:filename.js
   param: { module: script, action: load }

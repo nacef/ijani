@@ -2,4 +2,7 @@
 # http://www.symfony-project.org/reference/1_4/en/11-App
 
 # default values
-#all:
+all:
+  google_maps_api:
+    keys:
+      ijani: ABQIAAAAgLmlT0Hk0kJj0NU2Fjb5UBRXoTXu68pHhO4ZeKNYH3DfYaATZhSWVf8HrxVYAW5-Xn9_Flbf7GGKXQ

@@ -16,7 +16,7 @@ class commentAdminForm extends PluginCommentCommonForm
     $this->widgetSchema['created_at'] = new sfWidgetFormInputHidden();
     $this->widgetSchema['updated_at'] = new sfWidgetFormInputHidden();
     $this->widgetSchema['user_id'] = new sfWidgetFormInputHidden();
-
+/*
     if($this->getObject()->user_id != null )
     {
       unset( $this['author_email'], $this['author_website'], $this['author_name'] );
@@ -27,8 +27,8 @@ class commentAdminForm extends PluginCommentCommonForm
     }
     else
     {
-      unset( $this['user_id'] );
-    }
+  */    unset( $this['user_id'] );
+//    }
 
     $this->validatorSchema['edition_reason']
       ->setOption('required', true)
